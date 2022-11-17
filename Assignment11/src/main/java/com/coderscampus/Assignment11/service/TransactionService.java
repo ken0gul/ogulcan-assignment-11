@@ -18,6 +18,12 @@ public class TransactionService {
 		return repo.findAll();
 	}
 
+	// Return a transaction so you can use it on your controller
+	public Transaction findById(Long id) {
+		return repo.findById(id);
+		
+	}
+
 	
 
 	
