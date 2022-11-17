@@ -38,11 +38,11 @@ public class Controller {
 	}
 
 	@GetMapping("/transactions/{id}")
-	public String getSingleTransaction(@PathVariable("id") Long id) {
+	public String getSingleTransaction(@PathVariable("id") Long id, Model model) {
 		Transaction foundTransaction = transactionService.findById(id);
 		System.out.println(foundTransaction);
-
-		return "transactions/{id}";
+		model.addAttribute("transaction", foundTransaction);
+		return "transaction";
 	}
 
 }
