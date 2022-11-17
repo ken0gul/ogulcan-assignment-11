@@ -7,10 +7,9 @@ import java.util.List;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
 
 import com.codercampus.Assignment11.domain.Transaction;
-import com.coderscampus.Assignment11.service.TransactionService;
+import com.codercampus.Assignment11.service.TransactionService;
 
 @org.springframework.stereotype.Controller
 public class Controller {

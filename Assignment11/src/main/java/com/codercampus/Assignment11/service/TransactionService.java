@@ -1,4 +1,4 @@
-package com.coderscampus.Assignment11.service;
+package com.codercampus.Assignment11.service;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
