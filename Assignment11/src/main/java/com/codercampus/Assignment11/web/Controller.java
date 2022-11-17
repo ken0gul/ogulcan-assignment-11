@@ -44,13 +44,5 @@ public class Controller {
 		model.addAttribute("transaction", foundTransaction);
 		return "transaction";
 	}
-	
-	
-//	@PostMapping("/transactions/")
-//	public String getBackToMainPage() {
-//		
-//		return "redirect:/transactions";
-//	}
-	
 
 }
