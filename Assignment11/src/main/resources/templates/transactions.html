@@ -15,11 +15,12 @@
 			<th>Funds Out</th>
 		</tr>
 		<tr th:each="t : ${transactions}">
-			<td><a href="/transactions/50" th:inline="text">[[${t.id}]]</a></td>
-			<td><a href="/transactions/50" th:inline="text">[[${t.date}]]</a></td>
-			<td><a href="/transactions/50" th:inline="text">[[${t.retailer}]]</a></td>
-			<td ><a href="/transactions/50" th:inline="text" th:if="${t.type == 'D'}" th:text="${t.amount}"></a></td>
-			<td><a href="/transactions/50" th:inline="text" th:if="${t.type == 'C'}">[[${t.amount}]]</a></td>
+			<td><a th:href="@{/transactions/{transactionId}(transactionId=${t.id})}" th:inline="text">[[${t.id}]]</a></td>
+			<td><a th:inline="text">[[${t.date}]]</a></td>
+			<td><a th:inline="text">[[${t.retailer}]]</a></td>
+			<td><a th:inline="text" th:if="${t.type == 'D'}"
+				th:text="${t.amount}"></a></td>
+			<td><a th:inline="text" th:if="${t.type == 'C'}">[[${t.amount}]]</a></td>
 		</tr>
 
 
