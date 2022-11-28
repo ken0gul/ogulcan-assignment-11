@@ -14,11 +14,12 @@
 		
 		
 		<span th:if="${transaction.type == 'D'}">DEBIT</span>
-		<span th:unless="${transaction.type == 'D'}">CREDIT</span>
+		<span th:if="${transaction.type == 'C'}">CREDIT</span>
 		
 		</h2>
 			<p>DATE: [[${transaction.date}]]</p>
-			<p>AMOUNT : [[${transaction.amount}]]</p>
+			<p th:text="${transaction.type == 'D'} ? ${transaction.amount} : -${transaction.amount}"></p>
+		
 			<p>DESCRIPTION [[${transaction.description}]]</p>
 		</tr>
 		
